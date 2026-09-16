@@ -15,6 +15,12 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
+import About from './components/About'
+import Skills from './components/Skills'
+import Experience from './components/Experience' 
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+
 function App() {
   return (
     <>
@@ -48,11 +54,19 @@ function App() {
               spacing={1}
               sx={{ display: { xs: 'none', md: 'flex' } }}
             >
-              <Button color="inherit">About</Button>
-              <Button color="inherit">Skills</Button>
-              <Button color="inherit">Experience</Button>
-              <Button color="inherit">Projects</Button>
-              <Button color="inherit">Contact</Button>
+              <Button color="inherit" href="#about">About</Button>
+              <Button color="inherit" href="#skills">
+                Skills
+              </Button>
+              <Button color="inherit" href="#experience">
+                Experience
+              </Button>
+              <Button color="inherit" href="#projects">
+                Projects
+              </Button>
+              <Button color="inherit" href="#contact">
+                Contact
+              </Button>
             </Stack>
 
             <Stack direction="row" spacing={0.5}>
@@ -122,7 +136,7 @@ function App() {
             <Box>
 
               <Chip
-                label="AVAILABLE FOR OPPORTUNITIES"
+                label="OPEN TO WORK"
                 sx={{
                   mb: 3,
                   color: '#a78bfa',
@@ -142,6 +156,7 @@ function App() {
                   fontWeight: 800,
                   lineHeight: 1,
                   letterSpacing: '-3px',
+                  color: 'white',
                 }}
               >
                 Building
@@ -170,9 +185,9 @@ function App() {
                   lineHeight: 1.8,
                 }}
               >
-                I'm Satyam Tiwari, a Software Developer focused on
-                backend and full-stack development using Python,
-                Node.js, React and REST APIs.
+               I'm Satyam Tiwari, a Software Developer with experience in
+              backend and full-stack development. I work with Python,
+              Flask, Node.js, React, REST APIs and SQL databases.
               </Typography>
 
               <Stack
@@ -250,6 +265,7 @@ function App() {
                   sx={{
                     fontWeight: 800,
                     mb: 3,
+                    color: 'white',
                   }}
                 >
                   Satyam Tiwari
@@ -266,12 +282,35 @@ function App() {
                 </Typography>
 
                 <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-                  <Chip label="Python" />
-                  <Chip label="Flask" />
-                  <Chip label="Node.js" />
-                  <Chip label="React" />
-                  <Chip label="PostgreSQL" />
-                  <Chip label="REST APIs" />
+                  <Chip label="Python"  sx={{
+                    color: 'white',
+                    background: 'rgba(124,58,237,0.15)',
+                  }}/>
+                  <Chip label="Flask"
+                  sx={{
+                    color: 'white',
+                    background: 'rgba(124,58,237,0.15)',
+                  }} />
+                  <Chip label="Node.js" 
+                  sx={{
+                    color: 'white',
+                    background: 'rgba(124,58,237,0.15)',
+                  }} />
+                  <Chip label="React" 
+                  sx={{
+                    color: 'white',
+                    background: 'rgba(124,58,237,0.15)',
+                  }} />
+                  <Chip label="PostgreSQL" 
+                  sx={{
+                    color: 'white',
+                    background: 'rgba(124,58,237,0.15)',
+                  }} />
+                  <Chip label="REST APIs" 
+                  sx={{
+                    color: 'white',
+                    background: 'rgba(124,58,237,0.15)',
+                  }} />
                 </Stack>
               </Box>
             </Box>
@@ -279,6 +318,11 @@ function App() {
           </Box>
         </Container>
       </Box>
+      <About />
+      <Skills />
+      <Experience/>
+      <Projects/>
+      <Contact/>
     </>
   )
 }
